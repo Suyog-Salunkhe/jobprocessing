@@ -26,6 +26,21 @@ public class JobDetails {
     @Column(name = "JOB_STATUS")
     private String jobStatus;
 
+    @Column(name = "START_PROCESSING_TIMESTAMP")
+    private String startProcessingTimeStamp;
+
+    @Column(name = "FUTURE_EXECUTION_TIME")
+    private Long futureExecutionTime;
+
+    @Column(name = "START_TIME")
+    private Long startTime;
+
+    @Column(name = "END_TIME")
+    private Long endTime;
+
+    @Column(name = "TOTAL_TIME")
+    private Double totalTime;
+
     @Column(name = "STATUS", nullable = false, length = 10)
     private String status;
 
@@ -67,6 +82,50 @@ public class JobDetails {
 
     public void setJobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
+    }
+
+    public String getStartProcessingTimeStamp() {
+        return startProcessingTimeStamp;
+    }
+
+    public void setStartProcessingTimeStamp(String startProcessingTimeStamp) {
+        this.startProcessingTimeStamp = startProcessingTimeStamp;
+    }
+
+    public long getFutureExecutionTime() {
+        return futureExecutionTime;
+    }
+
+    public void setFutureExecutionTime(long futureExecutionTime) {
+        this.futureExecutionTime = futureExecutionTime;
+    }
+
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(Long startTime) {
+        this.startTime = startTime;
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Long endTime) {
+        this.endTime = endTime;
+    }
+
+    public void setFutureExecutionTime(Long futureExecutionTime) {
+        this.futureExecutionTime = futureExecutionTime;
+    }
+
+    public Double getTotalTime() {
+        return totalTime;
+    }
+
+    public void setTotalTime(double totalTime) {
+        this.totalTime = totalTime;
     }
 
     public String getStatus() {

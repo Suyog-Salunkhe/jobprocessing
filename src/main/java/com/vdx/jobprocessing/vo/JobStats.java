@@ -2,10 +2,17 @@ package com.vdx.jobprocessing.vo;
 
 public class JobStats {
 
-    private int jobsReceived;
-    private String averageProcessingTime;
-    private double jobSuccessRate;
-    private double jobFailureRate;
+    private Integer jobsReceived;
+    private Double averageProcessingTime;
+    private Double jobSuccessRate;
+    private Double jobFailureRate;
+
+    public JobStats(Integer jobsReceived, double averageProcessingTime, double jobSuccessRate, double jobFailureRate) {
+        this.jobsReceived = jobsReceived;
+        this.averageProcessingTime = averageProcessingTime;
+        this.jobSuccessRate = jobSuccessRate;
+        this.jobFailureRate = jobFailureRate;
+    }
 
     public JobStats(int jobsReceived) {
         this.jobsReceived = jobsReceived;
@@ -19,12 +26,12 @@ public class JobStats {
         this.jobsReceived = jobsReceived;
     }
 
-    public String getAverageProcessingTime() {
+    public double getAverageProcessingTime() {
         return averageProcessingTime;
     }
 
     public void setAverageProcessingTime(double averageProcessingTime) {
-        this.averageProcessingTime = new Double(averageProcessingTime).toString();
+        this.averageProcessingTime = averageProcessingTime;
     }
 
     public double getJobSuccessRate() {

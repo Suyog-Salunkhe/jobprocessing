@@ -18,4 +18,10 @@ public class Schedular {
     public void runJobs(){
         jobProcessor.processJob();
     }
+
+    @Scheduled(cron = "${collect-stats}")
+    @Transactional
+    public void collectStats(){
+        jobProcessor.storeStatsInFile();
+    }
 }
